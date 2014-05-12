@@ -1,0 +1,5 @@
+package kr.android.paint;
+
+public class MyView {
+
+}

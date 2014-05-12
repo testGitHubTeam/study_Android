@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DialogBounds_OverrideMethodDialog">
+		<item value="539" key="DIALOG_WIDTH"/>
+		<item value="105" key="DIALOG_Y_ORIGIN"/>
+		<item value="466" key="DIALOG_HEIGHT"/>
+		<item value="489" key="DIALOG_X_ORIGIN"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="false" key="configure_problem_severity_dialog_id"/>
+		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
+	</section>
+	<section name="SourceActionDialog.constructors">
+		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="Comments"/>
+		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="FinalModifier"/>
+	</section>
+	<section name="OverrideMethodDialog">
+		<item value="true" key="showtypes"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="3" key="pageIndex"/>
+	</section>
+	<section name="DialogBounds_GenerateToStringDialog">
+		<item value="516" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="525" key="DIALOG_X_ORIGIN"/>
+		<item value="690" key="DIALOG_HEIGHT"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item value="400" key="height"/>
+		<item value="600" key="width"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item value="false" key="SkipNull"/>
+		<item value="10" key="LimitValue"/>
+		<item value="false" key="Comments"/>
+		<item value="0" key="StringStyle"/>
+		<item value="0" key="ToStringTemplateSelected"/>
+		<item value="false" key="LimitElements"/>
+		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="FinalModifier"/>
+		<item value="true" key="IgnoreDefault"/>
+	</section>
+	<section name="javadoc">
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="false" key="notree"/>
+		<item value="true" key="splitindex"/>
+		<item value="C:\Program Files\Java\jdk1.7.0_51\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="true" key="use"/>
+		<item value="false" key="nonavbar"/>
+		<item value="package" key="access"/>
+		<item value="true" key="version"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="C:\javanAndroid\workspace_android\69NewsXMLDemo\doc" key="destdir"/>
+		<item value="true" key="author"/>
+		<item value="" key="docletname"/>
+		<item value="1.7" key="source"/>
+		<item value="false" key="openinbrowser"/>
+		<item value="false" key="noindex"/>
+		<item value="" key="docletpath"/>
+		<item value="C:\javanAndroid\workspace_android\69NewsXMLDemo\javadoc.xml" key="antpath"/>
+		<item value="true" key="fromStandard"/>
+		<section name="projects">
+			<section name="68CameraDemo">
+				<item value="C:\javanAndroid\workspace_android\68CameraDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\68CameraDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="67PaintDemo">
+				<item value="C:\javanAndroid\workspace_android\67PaintDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\67PaintDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="64FileSearchByGallery">
+				<item value="C:\javanAndroid\workspace_android\64FileSearchByGallery\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\64FileSearchByGallery\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="59ServiceDemo">
+				<item value="C:\javanAndroid\workspace_android\59ServiceDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\59ServiceDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="Servers">
+				<item value="C:\javanAndroid\workspace_android\Servers\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\Servers\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="66PreferencesEx">
+				<item value="C:\javanAndroid\workspace_android\66PreferencesEx\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\66PreferencesEx\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="58SQLiteDemo">
+				<item value="C:\javanAndroid\workspace_android\58SQLiteDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\58SQLiteDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="64FileSearchbyGallery_revised">
+				<item value="C:\javanAndroid\workspace_android\64FileSearchbyGallery_revised\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\64FileSearchbyGallery_revised\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="63IntentResultDemo">
+				<item value="C:\javanAndroid\workspace_android\63IntentResultDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\63IntentResultDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="web">
+				<item value="C:\javanAndroid\workspace_android\web\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\web\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="android-support-v7-appcompat">
+				<item value="C:\javanAndroid\workspace_android\android-support-v7-appcompat\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\android-support-v7-appcompat\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="56HttpClientPostDemo">
+				<item value="C:\javanAndroid\workspace_android\56HttpClientPostDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\56HttpClientPostDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="61ContactDemo">
+				<item value="C:\javanAndroid\workspace_android\61ContactDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\61ContactDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="44DOMXMLDemo">
+				<item value="C:\javanAndroid\workspace_android\44DOMXMLDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\44DOMXMLDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="RemoteSystemsTempFiles">
+				<item value="C:\javanAndroid\workspace_android\RemoteSystemsTempFiles\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\RemoteSystemsTempFiles\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="62IntentDemo">
+				<item value="C:\javanAndroid\workspace_android\62IntentDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\62IntentDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="57HttpClientWeatherDemo">
+				<item value="C:\javanAndroid\workspace_android\57HttpClientWeatherDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\57HttpClientWeatherDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="46XMLPullParserDemo">
+				<item value="C:\javanAndroid\workspace_android\46XMLPullParserDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\46XMLPullParserDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="60BroadCastReceiverDemo">
+				<item value="C:\javanAndroid\workspace_android\60BroadCastReceiverDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\60BroadCastReceiverDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="69NewsXMLDemo">
+				<item value="C:\javanAndroid\workspace_android\69NewsXMLDemo\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\69NewsXMLDemo\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="appcompat_v7">
+				<item value="C:\javanAndroid\workspace_android\appcompat_v7\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\appcompat_v7\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="65ListViewCustomized">
+				<item value="C:\javanAndroid\workspace_android\65ListViewCustomized\doc" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\javanAndroid\workspace_android\65ListViewCustomized\javadoc.xml" key="antpath"/>
+			</section>
+		</section>
+	</section>
+	<section name="DialogBounds_AddUnimplementedConstructorsDialog">
+		<item value="531" key="DIALOG_WIDTH"/>
+		<item value="21" key="DIALOG_Y_ORIGIN"/>
+		<item value="543" key="DIALOG_X_ORIGIN"/>
+		<item value="626" key="DIALOG_HEIGHT"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
+		<item value="true" key="group_libraries"/>
+		<item value="false" key="linkWithEditor"/>
+		<item value="2" key="layout"/>
+		<item value="1" key="rootMode"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;packageExplorer group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;&gt;&#x0D;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0D;&#x0A;&lt;xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;/customFilters&gt;&#x0D;&#x0A;&lt;/packageExplorer&gt;" key="memento"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="97" key="DIALOG_Y_ORIGIN"/>
+			<item value="444" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="DialogBounds_AddDelegateMethodsDialog">
+		<item value="561" key="DIALOG_WIDTH"/>
+		<item value="93" key="DIALOG_Y_ORIGIN"/>
+		<item value="634" key="DIALOG_X_ORIGIN"/>
+		<item value="553" key="DIALOG_HEIGHT"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="AddUnimplementedConstructorsDialog">
+		<item value="false" key="OmitCallToSuper"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="true" key="create_unimplemented"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="*" key="patterns"/>
+		<item value="false" key="updateQualifiedNames"/>
+		<item value="false" key="renameSubpackages"/>
+		<item value="false" key="updateTextualMatches"/>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="616" key="DIALOG_WIDTH"/>
+		<item value="18" key="DIALOG_Y_ORIGIN"/>
+		<item value="422" key="DIALOG_X_ORIGIN"/>
+		<item value="615" key="DIALOG_HEIGHT"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>

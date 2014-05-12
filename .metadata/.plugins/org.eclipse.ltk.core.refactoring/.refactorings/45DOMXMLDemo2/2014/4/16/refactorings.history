@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;45DOMXMLDemo2/res/raw/word.xml&apos; to &apos;product.xml&apos;" description="Rename resource &apos;word.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/raw/word.xml" name="product.xml" stamp="1397802995964" updateReferences="true"/>
+</session>

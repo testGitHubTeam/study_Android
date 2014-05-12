@@ -1,0 +1,15 @@
+127.0.0.1 - - [22/Apr/2014:16:26:42 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:26:44 +0900] "GET /web/index.jsp HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:35:39 +0900] "GET /web/index.jsp?name=Kim&addreass=Seoul HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:35:52 +0900] "GET /web/index.jsp?name=Kim&addreass=Seoul HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:36:02 +0900] "GET /web/index.jsp?name=Kim&addreass=Seoul HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:36:29 +0900] "GET /web/index.jsp?name=Kim&addreass=Seoul HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:36:30 +0900] "GET /web/index.jsp?name=Kim&addreass=Seoul HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:37:35 +0900] "GET /web/index.jsp?name=Kim&addreass=Seoul HTTP/1.1" 200 281
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:37:37 +0900] "GET /web/index.jsp?name=Kim&addreass=Seoul HTTP/1.1" 200 281
+127.0.0.1 - - [22/Apr/2014:16:42:14 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:42:15 +0900] "GET /web/postTest.jsp HTTP/1.1" 200 4
+127.0.0.1 - - [22/Apr/2014:16:49:47 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [22/Apr/2014:16:49:48 +0900] "GET /web/postTest.jsp HTTP/1.1" 200 4
+192.168.0.20 - - [22/Apr/2014:16:51:25 +0900] "POST /web/postTest.jsp HTTP/1.1" 200 4
+192.168.0.20 - - [22/Apr/2014:16:53:08 +0900] "POST /web/postTest.jsp HTTP/1.1" 200 4

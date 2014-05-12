@@ -1,0 +1,5 @@
+package kr.android.result;
+
+public class IntentTow {
+
+}

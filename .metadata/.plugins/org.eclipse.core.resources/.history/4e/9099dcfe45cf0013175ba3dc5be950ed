@@ -1,0 +1,40 @@
+package kr.android.preferences;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends ActionBarActivity implements OnClickListener{
+	
+	EditText etText;
+	Button btnWrite, btnMove, btnRead;
+	TextView tvView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		etText = (EditText)findViewById(R.id.etText);
+		btnWrite = (Button)findViewById(R.id.btnWrite);
+		btnMove = (Button)findViewById(R.id.btnMove);
+		btnRead = (Button)findViewById(R.id.btnRead);
+		tvView = (TextView)findViewById(R.id.tvView);		
+		
+		btnWrite.setOnClickListener(this);
+		btnMove.setOnClickListener(this);
+		btnRead.setOnClickListener(this);	
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}	
+
+}

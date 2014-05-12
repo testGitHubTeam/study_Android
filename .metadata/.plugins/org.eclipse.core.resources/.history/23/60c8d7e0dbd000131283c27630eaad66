@@ -1,0 +1,59 @@
+package kr.android.video;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.widget.MediaController;
+import android.widget.VideoView;
+
+public class MainActivity extends ActionBarActivity {
+	
+	VideoView vwVideo;
+	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		vwVideo = (VideoView)findViewById(R.id.vwVideo);
+		vwVideo.requestFocus();
+		vwVideo.setMediaController(new MediaController(this));		
+		
+	}
+	
+	//raw 폴더에서 파일을 호출해서 InputStream으로 가공
+	private void rawToFile(Context context, int resID, String fileName){
+		InputStream inputStream = context.getResources().openRawResource(resID)
+	}
+	
+	//InputStream을 내장영역의 파일로 저장
+	private void intoFile(Context context, InputStream inputStream, String fileName) throws Exception{
+		int count;
+		byte[] size = new byte[1024];
+		OutputStream outputStream = null;
+		
+		try{
+			outputStream = openFileOutput(fileName, MODE_WORLD_READABLE);
+			
+			while(true){
+				count = inputStream.read(size);
+				if(count<=0) break;
+				outputStream.write(size, 0, count);
+			}
+		}catch(Exception e){
+			Log.e("VideoDemo", "IO Error", e);
+		}finally{
+			if(outputStream!=null){ try{outputStream.close();}catch(IOException e){e.printStackTrace();} }
+			if(inputStream!=null){ try{inputStream.close();}catch(IOException e){e.printStackTrace();} }
+		}
+	}
+
+	
+
+}

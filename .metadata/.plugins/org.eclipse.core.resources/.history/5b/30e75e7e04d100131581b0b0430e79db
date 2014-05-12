@@ -1,0 +1,46 @@
+package kr.android.map;
+
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+
+public class MainActivity extends ActionBarActivity {
+
+	GoogleMap map;
+	static final LatLng ADDRESS_GANGNAMSTATION = new LatLng(37.498155, 127.027642);
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		if(map==null){
+			map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
+			if(map!=null){
+				//기본 마커표시
+//				addBasicMarker();
+				
+				//화면에 지정한 위도 경도 표시
+				CameraPosition cameraPosition = new CameraPosition.Builder().target(ADDRESS_GANGNAMSTATION).zoom(17).build();
+				//맵에 원하는 위치 표시
+				map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+				
+				//나의 현재 위치 읽어오기
+				map.setMyLocationEnabled(true);
+				
+				//나의 위치를 찾는 버튼 표시
+				UiSettings uiSettings = map.getUiSettings();
+				uiSettings.setMyLocationButtonEnabled(true);
+				
+				
+				
+			}
+		}		
+	}
+}

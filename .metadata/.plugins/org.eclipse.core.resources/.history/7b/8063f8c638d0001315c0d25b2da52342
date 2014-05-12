@@ -1,0 +1,28 @@
+package kr.android.news;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.webkit.WebView;
+
+public class NewsRSSDetail extends Activity{
+	
+	String title, description, pubDate;
+	WebView wvWeb;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.news_detail);
+		
+		Intent intent = getIntent();
+		
+		title = intent.getExtras().getString("title");
+		pubDate = intent.getExtras().getString("pubDate");
+		description = intent.getExtras().getString("description");
+		
+		
+	}
+
+}
