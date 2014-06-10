@@ -1,7 +1,0 @@
-package kr.android.broadcastreceiver;
-
-import android.app.Activity;
-
-public class NotificationMessage extends Activity{
-
-}

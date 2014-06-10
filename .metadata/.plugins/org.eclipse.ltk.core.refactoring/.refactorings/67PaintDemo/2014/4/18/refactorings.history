@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;MyView.java&apos; to &apos;kr.android.paint.MyView.java&apos;&#x0D;&#x0A;- Original project: &apos;67PaintDemo&apos;&#x0D;&#x0A;- Destination element: &apos;kr.android.paint.MyView.java&apos;&#x0D;&#x0A;- Original element: &apos;kr.android.paint.MyView.java&apos;" description="Copy compilation unit" destination="/src&lt;kr.android.paint{MyView.java" element1="/src&lt;kr.android.paint{MyView.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1398742957119" units="1" version="1.0"/>
-</session>
