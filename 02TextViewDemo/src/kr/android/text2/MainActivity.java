@@ -1,5 +1,5 @@
 /*  layout의 객체 참조
- * 
+
  * 코드와 UI가 철저히 분리되어 있음
 -java 코드
 -xml UI
@@ -10,7 +10,6 @@
 											@: R.class의미
 -안드로이드는 ID만 관리하는 객체가 따로 존재하며
 -R.java(gen\kr.android.text2.R.java)클래스에서 ID 관리
-
  * 
  * 
 */

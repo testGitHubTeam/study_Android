@@ -6,7 +6,7 @@
     tools:context="kr.android.edit.MainActivity"
     tools:ignore="MergeRootFrame" >
 
-    <!--
+ <!--
  수평크기를 EM크기 기준을 지정 (10자 공간 지정)
  EM은 가장 큰 글자를 기준으로 한 영역을 의미
  android:ems="10" 
@@ -27,9 +27,8 @@
  - 입력시에도 사라지지 않음
  
  포커주기
- <requestFocus />
- 
-     -->
+ <requestFocus /> 
+-->
     <EditText
         android:id="@+id/editText1"
         android:layout_width="match_parent"
@@ -37,7 +36,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:inputType="textMultiLine"
-        android:text="text명시, 검색어를 입력하세요~"
+        android:hint="text속성 명시, 검색어를 입력하세요~"
         >
 
         <requestFocus />

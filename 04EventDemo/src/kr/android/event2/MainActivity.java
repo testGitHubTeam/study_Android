@@ -13,8 +13,8 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 	
@@ -34,10 +34,10 @@ public class MainActivity extends Activity {
         	//이벤트 핸들러
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				updateTime();
 			}
 		});
+        
     }
     
     private void updateTime(){

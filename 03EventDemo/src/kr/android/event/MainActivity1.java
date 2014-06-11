@@ -30,9 +30,12 @@ public class MainActivity1 extends Activity {
         updateTime();
     }
     
+    //현재 날짜와 시간
     private void updateTime(){
     	//Date -> String
+    	//기본 날짜 표현형식으로 출력
     	//btn.setText(new Date().toString());
+    	//날짜 표현 형식 지정하여 출력
     	btn.setText(sf.format(new Date()));
     }
 

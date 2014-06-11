@@ -37,12 +37,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
         
         btn = (Button) findViewById(R.id.button1);
         
-        //이벤트 소스와 이벤트 리스너 연결
+        //버튼 이벤트 소스와 이벤트 리스너 연결
         btn.setOnClickListener(this);
         
         updateTime();
     }
     
+    //현재 날짜와 시간
     private void updateTime(){
     	//Date -> String
     	//btn.setText(new Date().toString());
