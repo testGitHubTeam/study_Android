@@ -36,7 +36,4 @@ android:padding="50pd"
         android:paddingBottom="20dp"
         />
     
-    
-    
     </LinearLayout>
-

@@ -19,7 +19,6 @@
             android:layout_weight="1" 
             android:hint="@string/hint_text"
             >
-
             <requestFocus />
         </EditText>
 

@@ -1,7 +1,4 @@
-/* Layout_gravity
-
-
-*/
+/* Layout_gravity */
 package kr.android.linear3;
 
 import android.app.Activity;
@@ -13,11 +10,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
        
     }
-
-
-   
 
 }

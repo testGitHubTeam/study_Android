@@ -12,8 +12,6 @@ public class MainActivity extends Activity {
 	Button btn;
 	ImageView imgv;
 	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -22,6 +20,9 @@ public class MainActivity extends Activity {
 		btn = (Button)findViewById(R.id.btnPush);
 		imgv = (ImageView)findViewById(R.id.imgvPride);
 		
+		//imgv.setVisibility(View.INVISIBLE);
+		
+		//이벤트 연결
 		btn.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {

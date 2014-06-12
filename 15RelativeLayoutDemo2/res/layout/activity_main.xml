@@ -7,7 +7,6 @@
     tools:context="kr.android.relative2.MainActivity"
     >
     
-    
     <TextView 
         android:id="@+id/lable"
         android:layout_width="wrap_content"
@@ -39,8 +38,7 @@
          android:text="OK"
          />
      
-     <!-- Layout을 기준으로 배치 - 부모를 기준으로해서 위치 지정
-     -->
+<!-- Layout을 기준으로 배치 - 부모를 기준으로해서 위치 지정 -->
      
      <Button 
          android:id="@+id/btnBottomBtn"
@@ -52,4 +50,3 @@
          />
         
     </RelativeLayout>
-

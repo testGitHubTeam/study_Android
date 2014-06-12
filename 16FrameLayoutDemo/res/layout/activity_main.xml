@@ -16,7 +16,7 @@
         android:id="@+id/imgvPride"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/pride" />
+        android:src="@drawable/southkorea" />
 
 </FrameLayout>
 

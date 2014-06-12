@@ -25,14 +25,17 @@ public class MainActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//데이터 저장소 생성 및 추가
 		items = new ArrayList<String>();
 		items.add("One");
 		items.add("Two");
 		items.add("Three");
 		
+		//체크박스로 다중 선택할 수  ListView만드는 adapter객체 생성 
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, items);
 		
 		myListView = (ListView)findViewById(R.id.lvList);
+		//ListView에 ArrayAdapter등록
 		myListView.setAdapter(adapter);
 		//선택모드 지정(멀티 모드)
 		myListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -44,12 +47,11 @@ public class MainActivity extends Activity implements OnClickListener{
 		//이벤트 소스와 이벤트 리스너 연결
 		btnAdd.setOnClickListener(this);
 		btnDel.setOnClickListener(this);
-		
 	}
 
+	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		
 		switch(v.getId()){
 		case R.id.btnAdd:

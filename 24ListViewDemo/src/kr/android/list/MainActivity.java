@@ -1,5 +1,4 @@
-/* 목록 작업
-*/
+/* 목록 작업 */
 package kr.android.list;
 
 import android.app.Activity;
@@ -25,7 +24,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 		setContentView(R.layout.activity_main);
 		
 		text = (TextView)findViewById(R.id.textView1);
-		//단순히 데이터를 표기
+		//단순히 데이터를 표시
 		list = (ListView)findViewById(R.id.listView1);
 		
 		//목록 작업 단계
@@ -47,7 +46,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 	//View view: 리스트의 아이템별 개별적인 view
 	//			 ListView에서 이벤트가 발생한 데이터를 표시하는 View
 	//int position: 인덱스 값, 데이터를 표시할 때의 위치값
-	//long id: 포지션값과 일지, 데이터베이스 연동시 primary key의 id가 명시됨
+	//long id: 포지션값과 일치, 데이터베이스 연동시 primary key의 id가 명시됨
 	//이벤트 핸들러
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

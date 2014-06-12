@@ -8,10 +8,7 @@
      >
      
     <!-- @: R class
-    @+id: ID생성 
-    
- 
-    
+    @+id/id명: ID생성 
     -->
     
     <Button 

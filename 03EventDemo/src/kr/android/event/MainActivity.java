@@ -35,6 +35,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        //findViewById()메소드를 이용해 해당 ID의 객체 참조
         btn = (Button) findViewById(R.id.button1);
         
         //버튼 이벤트 소스와 이벤트 리스너 연결

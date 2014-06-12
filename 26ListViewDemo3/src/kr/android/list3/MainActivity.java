@@ -24,14 +24,17 @@ public class MainActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//데이터 자장소 생성 및 데이터 추가
 		items = new ArrayList<String>();
 		items.add("First");
 		items.add("Second");
 		items.add("Third");
 		
+		//라디오버튼으로 선택할 수  ListView만드는 adapter객체 생성 
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, items);
 		
 		myListView = (ListView)findViewById(R.id.lvList);
+		//ListView에 ArrayAdapter등록
 		myListView.setAdapter(adapter);
 		
 		//선택모드 지정(단일 선택)
@@ -49,7 +52,6 @@ public class MainActivity extends Activity implements OnClickListener{
 	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch(v.getId()){
 			case R.id.btnAdd:	//데이터 추가
 				String text = myEditText.getText().toString();
@@ -78,7 +80,4 @@ public class MainActivity extends Activity implements OnClickListener{
 				break;
 		}
 	}
-
-	
-
 }

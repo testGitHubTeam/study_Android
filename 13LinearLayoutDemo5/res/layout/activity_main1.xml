@@ -7,13 +7,9 @@
     tools:context="kr.android.linear5.MainActivity"
     >   
     
-    
-    <!-- 
-    
-    비율 주지 않고 명시
-    
-    
-     -->
+<!-- 
+ 	비율 주지 않고 명시
+-->
     
     <Button 
         android:id="@+id/button1"
@@ -33,8 +29,4 @@
         android:text="메뉴바"
         />
     
-    
-    
-    
     </LinearLayout>
-
