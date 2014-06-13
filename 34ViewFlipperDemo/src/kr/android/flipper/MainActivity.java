@@ -9,6 +9,7 @@ import android.widget.ViewFlipper;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
+	//ViewFlipper객체 생성
 	ViewFlipper myViewFlipper;
 	Button btnPrev, btnNext;
 
@@ -21,11 +22,13 @@ public class MainActivity extends Activity implements OnClickListener{
 		btnPrev = (Button)findViewById(R.id.btnPrev);
 		btnNext =(Button)findViewById(R.id.btnNext);
 		
+		//이벤트 연결
 		btnPrev.setOnClickListener(this);
 		btnNext.setOnClickListener(this);
 		
 	}
 
+	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
 		if(v.getId()==R.id.btnNext){	//다음 뷰 호출

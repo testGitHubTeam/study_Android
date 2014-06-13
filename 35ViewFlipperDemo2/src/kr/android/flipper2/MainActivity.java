@@ -14,22 +14,22 @@ public class MainActivity extends Activity implements View.OnTouchListener{
 	
 	ViewFlipper myViewFlipper;
 	
-	//터치 이벤트 발생 지점의 x좌표 저장
-	float down_x;
-	float up_x;
-	
 	int[] imageItems;
 	ImageView iv1, iv2;
 	int num;
 	int cnt;
-	
+
+	//터치 이벤트 발생 지점의 x좌표 저장
+	float down_x;
+	float up_x;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		imageItems = new int[]{R.drawable.image01,R.drawable.image02,R.drawable.image03};
+		//배열 생성
+		imageItems = new int[]{R.drawable.img01,R.drawable.img02,R.drawable.img03, R.drawable.img04, R.drawable.img05, R.drawable.img06, R.drawable.img07, R.drawable.img08, R.drawable.img09};
 		
 		myViewFlipper = (ViewFlipper)findViewById(R.id.vfView);
 		
@@ -40,6 +40,7 @@ public class MainActivity extends Activity implements View.OnTouchListener{
 			myViewFlipper.addView(imageView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 		}
 		
+		//이벤트 연결
 		myViewFlipper.setOnTouchListener(this);		
 	}
 

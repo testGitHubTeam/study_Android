@@ -19,6 +19,7 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 	
 	Button btn;
+	//날짜 표현 형식 설정
 	SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd a hh:mm:ss");
 
     @Override
@@ -39,7 +40,7 @@ public class MainActivity extends Activity {
 		});
         
     }
-    
+    //현재 날짜와 시간
     private void updateTime(){
     	btn.setText(sf.format(new Date()));
     }

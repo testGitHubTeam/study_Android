@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
+	//변수 선언
 	Button btnYellow, btnPink, btnRed;
 	ViewPager myViewPager;
 	int[] btn ={R.id.btnP, R.id.btnR, R.id.btnY};
@@ -51,7 +52,7 @@ public class MainActivity extends Activity {
 			findViewById(id).setOnClickListener(myListener);			
 		}
 		
-		//ViewPager호출
+		//ViewPager 참조
 		myViewPager = (ViewPager)findViewById(R.id.vpView);
 		
 		//ViewPager에 어댑터 클래스를 등록
@@ -60,14 +61,14 @@ public class MainActivity extends Activity {
 	
 	//추상클래스인 PagerAdapter상속하여 커스텀페이저어댑터 정의
 	private class MyPagerAdapter extends PagerAdapter{		
-		//XML을 읽어들여서 XML에 표시된 클래스 정보를 토대로 객체를 생성하는 객체 선언
+		//XML을 읽어들여서 XML에 표시된 클래스 정보를 토대로 객체를 생성해주는 객체 선언
 		LayoutInflater myLayoutInflater;
 		
 		public MyPagerAdapter(Context context){
 			myLayoutInflater = LayoutInflater.from(context);
 		}
 		
-		//ViewPager에서 사용할 View객체 생성/등록 하도록 instantiateItem() Override		
+		//ViewPager에서 사용할 View객체 생성/등록 하도록 instantiateItem() 재정의		
 		@Override
 		public Object instantiateItem(View pager, int position){			
 			View v = null;
@@ -75,23 +76,22 @@ public class MainActivity extends Activity {
 			case 0:
 				
 				//지정된 XML파일을 읽어들여 객체를 생성하고 XML의 상위에 있는 View를 반환
-				v = myLayoutInflater.inflate(R.layout.page_one, null);
+				v = myLayoutInflater.inflate(R.layout.page_yellow, null);
 				//RelativeLayout의 하위객체인 Button을 호출하여 이벤트 연결				
 				v.findViewById(R.id.btnYellow).setOnClickListener(myListener);
 				break;
 			case 1:
-				v = myLayoutInflater.inflate(R.layout.page_two,  null);
+				v = myLayoutInflater.inflate(R.layout.page_pink,  null);
 				v.findViewById(R.id.btnPink).setOnClickListener(myListener);
 				break;
 			case 2:
-				v= myLayoutInflater.inflate(R.layout.page_three,  null);
+				v= myLayoutInflater.inflate(R.layout.page_red,  null);
 				v.findViewById(R.id.btnRed).setOnClickListener(myListener);
 				break;			
 			}
 			
 			//생성된 View객체 등록
-									//XML에서 생성한 view, index
-			((ViewPager)pager).addView(v, 0);
+			((ViewPager)pager).addView(v, 0);	//XML에서 생성한 view, index
 			
 			return v;
 		}
@@ -113,7 +113,6 @@ public class MainActivity extends Activity {
 		//instantiateItem메서드에서 생성된 객체를 이용할 것인지를 체크
 		@Override
 		public boolean isViewFromObject(View view, Object object) {
-			// TODO Auto-generated method stub
 			return view==object;
 		}		
 	}	

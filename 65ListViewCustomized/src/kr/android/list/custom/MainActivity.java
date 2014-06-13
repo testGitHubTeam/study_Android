@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 	
+	//객체 선언
 	ArrayList<MyItem> myItems;
 
 	@Override
@@ -28,13 +29,13 @@ public class MainActivity extends ActionBarActivity {
 		//데이터 생성 및 저장
 		myItems = new ArrayList<MyItem>();
 		myItems.add(new MyItem(R.drawable.ic_launcher, "Sony VAIO"));
-		myItems.add(new MyItem(R.drawable.ic_launcher, "IMB ThinkPad"));
+		myItems.add(new MyItem(R.drawable.ic_launcher, "IBM ThinkPad"));
 		myItems.add(new MyItem(R.drawable.ic_launcher, "Apple MacBookpro"));
 		
-		//
+		//어댑터 객체 생성
 		MyListAdapter myListAdapter = new MyListAdapter(this, R.layout.widget_icontext, myItems);
 		
-		//ListVIew와 매칭
+		//ListView와 매칭
 		ListView lvList = (ListView)findViewById(R.id.lvList);
 		lvList.setAdapter(myListAdapter);
 	}
@@ -56,45 +57,48 @@ public class MainActivity extends ActionBarActivity {
 			//ListView에서 사용할 View를 정의한 XML을 읽어오기 위해
 			inflater = LayoutInflater.from(context);
 		}		
-
+		
+		//전체 데이터의 개수 반환
 		@Override
 		public int getCount() {
-			// TODO Auto-generated method stub
 			return myItems.size();
 		}
-
+		
+		//전달된 포지션값에 해당하는 데이터 반환 
 		@Override
 		public Object getItem(int position) {
-			// TODO Auto-generated method stub
 			return myItems.get(position).name;
 		}
 
+		//포시션값 반환
 		@Override
 		public long getItemId(int position) {
-			// TODO Auto-generated method stub
 			return position;
 		}
 
+		//실제 데이터 반환 (아이템으로 보여질 뷰 객체 리턴)
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			
 			final int pos = position;
 			
+			//convertView객체가 null인지 유무 체크
 			if(convertView==null){
+				//null값이면 뷰 생성
 				convertView = inflater.inflate(layout, null);
-			}
+			}//null이 아니면 convertView에 데이터를 설정해서 리턴
 			
-			//
+			//리소스 참조
 			ImageView ivIcon = (ImageView)convertView.findViewById(R.id.ivIcon);
 			ivIcon.setImageResource(myItems.get(position).icon);
 			TextView tvName =(TextView)convertView.findViewById(R.id.tvName);
 			tvName.setText(myItems.get(position).name);
 			Button btnSelect = (Button)convertView.findViewById(R.id.btnSelect);
+			//이벤트 처리
 			btnSelect.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
-					// TODO Auto-generated method stub
 					//상품정보 읽어오기
 					String str = myItems.get(pos).name + "를 주문합니다";
 					

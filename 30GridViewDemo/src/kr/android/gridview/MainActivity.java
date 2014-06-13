@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 
 public class MainActivity extends Activity implements AdapterView.OnItemClickListener{
 
+	//배열 생성
 	String[] items={"호두", "사과", "복숭아", "고추", "수박", "메론", "바나나", "망고", "옥수수", "딸기", "피망", "파인애플", "자두", "살구", "앵두", "코코아", "호박", "토마토", "키위", "배"};
 	TextView myTextView;
 	GridView myGridView;
@@ -23,6 +24,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 		myTextView = (TextView)findViewById(R.id.tvView);
 		myGridView = (GridView)findViewById(R.id.gvView);
 		
+		//배열을 이용하는 adapter객체 생성
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 		
 		//GridView에 ArrayAdapter등록
@@ -33,13 +35,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 		
 	}
 
-	
+	//이벤트 핸들러 재정의
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		// 
 		myTextView.setText(items[position]);
 		
 	}
-
 	
 }

@@ -33,24 +33,27 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/linearLayout1" >
-
+        
         <ImageView
-            android:id="@+id/iv_jessica"
+            android:id="@+id/iv_img01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/jessica" />
-
+            android:src="@drawable/img01" />
         <ImageView
-            android:id="@+id/iv_taeyeon"
+            android:id="@+id/iv_img02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/taeyeon" />
-
+            android:src="@drawable/img02" />
         <ImageView
-            android:id="@+id/iv_yuna"
+            android:id="@+id/iv_img03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/yuna" />
+            android:src="@drawable/img03" />
+        <ImageView
+            android:id="@+id/iv_img04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img04" />
 
     </ViewFlipper>
 

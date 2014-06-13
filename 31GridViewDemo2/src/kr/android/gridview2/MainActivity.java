@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -24,7 +23,6 @@ public class MainActivity extends Activity {
 			R.drawable.malta, R.drawable.netherlands, R.drawable.poland, R.drawable.portugal, R.drawable.romania, R.drawable.slovakia,
 			R.drawable.slovenia, R.drawable.spain, R.drawable.sweden, R.drawable.united_kingdom};
 
-	ArrayAdapter<?> adapter;
 	GridView myGridView;
 	
 	@Override
@@ -46,6 +44,7 @@ public class MainActivity extends Activity {
 		//Activity의 부모가 Context
 		private Context context;
 		
+		//뷰의 생성자에는 항상 Context객체가 전달되어야 합니다.
 		public ImageAdapter(Context context){
 			this.context = context;
 		}		
@@ -59,7 +58,6 @@ public class MainActivity extends Activity {
 		//전달된 포지션값에 해당하는 데이터 반환 
 		@Override
 		public Object getItem(int position) {
-			// TODO Auto-generated method stub
 			return images[position];
 		}
 		
@@ -69,7 +67,7 @@ public class MainActivity extends Activity {
 			return position;
 		}
 
-		//실제 데이터 반환
+		//실제 데이터 반환 (아이템으로 보여질 뷰 객체 리턴)
 		//int position: 위치값
 		//View convertView: 실제 이미지를 넣을 수 있는 뷰(표시 될 뷰)
 		//ViewGroup parent: 부모그룹, GridView객체 의미		
@@ -77,8 +75,7 @@ public class MainActivity extends Activity {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			//재사용할 수 있는 ImageView가 있다면 ImageView를 재활용하고 
 			//생성된 ImageView가 없으면 객체 생성하여 작업 수행  
-			ImageView myImageView = (ImageView)convertView;
-			
+			ImageView myImageView = (ImageView)convertView;			
 			if(convertView == null){	//생성된 ImageView가 없으면, 최초인 경우
 				myImageView = new ImageView(context);
 			}

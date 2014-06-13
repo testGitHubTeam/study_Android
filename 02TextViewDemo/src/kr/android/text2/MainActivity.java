@@ -32,7 +32,9 @@ public class MainActivity extends Activity {
         //상수와 매칭된 TextView객체 호출
         //View -> TextView
         TextView text = (TextView)findViewById(R.id.textView1);
+        //배경색 설정
         text.setBackgroundColor(Color.BLUE);
+        //글꼴색 설정
         text.setTextColor(Color.CYAN);        
     }
 }
