@@ -54,6 +54,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/img04" />
+        <ImageView
+            android:id="@+id/iv_img05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img05" />
+        <ImageView
+            android:id="@+id/iv_img06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img06" />
+        <ImageView
+            android:id="@+id/iv_img07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img07" />
+        <ImageView
+            android:id="@+id/iv_img08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img08" />
 
     </ViewFlipper>
 

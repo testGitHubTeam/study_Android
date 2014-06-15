@@ -11,6 +11,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		//ActionBar생성
 		//ActionBar는 API 11부터 사용가능
 		//AndroidMainifest.xml의 minSDKVersion을 11이상으로 지정해야 함
 		ActionBar actionBar = getActionBar();

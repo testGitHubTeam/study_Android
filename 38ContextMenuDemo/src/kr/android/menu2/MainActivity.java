@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 public class MainActivity extends ListActivity {
-	
+	//배열 생성
 	String[] items ={"바나나", "딸기", "배", "멜론", "사과", "망고", "감", "땅콩", "호두", "밀감", "귤", "오렌지", "애플", "파인애플", "코코아"};
 	
 	ArrayAdapter<String> adapter;
@@ -19,8 +19,10 @@ public class MainActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//어댑터 생성
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 		
+		//ListView에 Adapter객체 등록
 		setListAdapter(adapter);
 		
 		//컨텍스트 메뉴를 연결할 View의 객체를 등록
@@ -28,6 +30,7 @@ public class MainActivity extends ListActivity {
 		
 	}
 	
+	//메뉴 생성
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View view, ContextMenu.ContextMenuInfo menuInfo){
 		

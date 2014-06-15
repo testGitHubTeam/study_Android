@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
+	//파일명 지정
 	static final String NOTES = "notes.txt";
 	
 	EditText etEditor;
@@ -37,6 +38,7 @@ public class MainActivity extends Activity {
 		etEditor = (EditText)findViewById(R.id.etEditor);
 		btnClose = (Button)findViewById(R.id.btnClose);
 		
+		//이벤트 처리
 		btnClose.setOnClickListener(new OnClickListener() {
 			
 			//이벤트 핸들러

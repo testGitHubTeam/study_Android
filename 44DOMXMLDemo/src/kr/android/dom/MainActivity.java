@@ -19,10 +19,9 @@ import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
 	
-	
+	//아이템들을 담을 리스트 객체 선언
 	ArrayList<String> items = new ArrayList<String>();
 	ArrayAdapter<String> adapter;
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +40,8 @@ public class MainActivity extends ListActivity {
 			//InputStream을 읽어들여 DOM트리 생성
 			Document doc = builder.parse(in);
 			
+			//NodeList words = doc.getDocumentElement().getElementsByTagName("word");
+			//<word>태그를 가진 노드 리스트 확인
 			NodeList words = doc.getElementsByTagName("word");
 			
 			for(int i=0; i<words.getLength(); i++){
@@ -48,7 +49,9 @@ public class MainActivity extends ListActivity {
 				items.add( e.getAttribute("value") );				
 			}
 			
+			//어댑터 생성
 			adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+			//ListView에 어댑터 등록
 			setListAdapter(adapter);
 			
 			

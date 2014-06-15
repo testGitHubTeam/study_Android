@@ -3,9 +3,7 @@ package kr.android.file2;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOError;
 import java.io.IOException;
-import java.nio.ReadOnlyBufferException;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -30,10 +28,10 @@ public class MainActivity extends Activity {
 		
 		tvOutput =(TextView)findViewById(R.id.tvOutput);
 		
-		//파일 생성
+		//파일 생성 호출
 		writeFileToSDCard();
 		
-		//파일 읽기
+		//파일 읽기 호출
 		readFileFromSDCard();		
 		
 	}

@@ -38,10 +38,10 @@ import android.widget.TextView;
 
 public class MainActivity extends ListActivity {
 	
-	/**XML정보 경로*/
+	//XML정보 경로
 	public static final String  ARTICLE_URL = "https://news.google.co.kr/news/feeds?pz=1&cf=all&ned=kr&h1=ko&topic=e&output=rss";
 
-	//목록에 필요한 데이터 저장	
+	//목록에 필요한 데이터 저장 객체 생성
 	ArrayList<MyNews> myRSS = new ArrayList<MyNews>();
 	
 	TextView tvTitle, tvDate, tvDescription;	
@@ -50,6 +50,7 @@ public class MainActivity extends ListActivity {
 	MyListAdapter adapter;
 	ProgressBar progressBar;
 	
+	//Sun, 15 Jun 2014 10:50:18 GMT -> 2014-06-15 10:50:18
 	//영문 형식의 날짜인 String데이터를 -> Date 데이터로 변형
 	SimpleDateFormat origin_Format = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
 	SimpleDateFormat new_Format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -70,7 +71,6 @@ public class MainActivity extends ListActivity {
 		progressBar.setVisibility(View.VISIBLE);
 		
 		new Thread(){
-
 			@Override
 			public void run() {
 				final InputStream inputStream = getStreamFromURL();
@@ -85,7 +85,6 @@ public class MainActivity extends ListActivity {
 							progressBar.setVisibility(View.GONE);
 						}
 				});
-
 				super.run();
 			}			
 		}.start();
@@ -211,24 +210,26 @@ public class MainActivity extends ListActivity {
 			inflater = LayoutInflater.from(context);
 		}
 
+		//전체 데이터의 개수 반환
 		@Override
 		public int getCount() {
 			
 			return myRSS.size();
 		}
 
+		//전달된 포지션값에 해당하는 데이터 반환 
 		@Override
 		public Object getItem(int position) {
-			// TODO Auto-generated method stub
 			return myRSS.get(position).title;
 		}
 
+		//포시션값 반환
 		@Override
 		public long getItemId(int position) {
-			// TODO Auto-generated method stub
 			return position;
 		}
 
+		//실제 데이터 반환 (아이템으로 보여질 뷰 객체 리턴)
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			
@@ -243,10 +244,8 @@ public class MainActivity extends ListActivity {
 			tvDate =(TextView)convertView.findViewById(R.id.tvDate);
 			tvDate.setText(myRSS.get(position).pubDate);
 			
-			
 			return convertView;
 		}
-		
 	}}
 
 /**

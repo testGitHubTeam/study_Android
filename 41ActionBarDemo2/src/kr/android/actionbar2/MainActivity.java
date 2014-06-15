@@ -14,17 +14,18 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//ActionBar 형태 지정
 		//현재 Activity의 ActionBar를 얻고(getActionBar() )
 		//상단 왼쪽에 있는 아이콘을 클릭했을 때 어플리케이션 홈으로 이동
 		
 		//홈으로 갈 수 있도록 링크 할 때, 타이틀이 같이 보여짐
 		//API버전 14부터 사용가능		
-//		getActionBar().setHomeButtonEnabled(true);
+		//getActionBar().setHomeButtonEnabled(true);
 		
 		//API버전 11부터 사용가능
 		//홈으로 가거나 상위 메뉴로 이동할 경우, 타이틀이 기본적으로 보여지지 않음
 										//ActionBar.DISPLAY_HOME_AS_UP: <만 있고 링크가 있다.
-																	//ActionBar.DISPLAY_SHOW_HOME: 아이콘이 보여짐
+										//ActionBar.DISPLAY_SHOW_HOME: 홈 아이콘 표시
 		getActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP|ActionBar.DISPLAY_SHOW_HOME);
 		//타이틀이 보여지도록 처리
 		getActionBar().setDisplayShowTitleEnabled(true);
@@ -33,11 +34,12 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// MenuInflater: XML파일의 메뉴정보를 읽어들여 메뉴 등록
+		// MenuInflater를 통해 XML파일의 메뉴정보를 읽어들여 메뉴 등록
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
+	//메뉴의 아이템을 클릭 시 자동 호출되는  onOptionsItemSelected 재정의
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		

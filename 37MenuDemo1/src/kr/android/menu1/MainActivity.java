@@ -1,6 +1,5 @@
 /*
  * 정해진 ID를 사용할 경우 ListActivity클래스를 상속받아서 사용
-
 */
 package kr.android.menu1;
 
@@ -12,6 +11,7 @@ import android.widget.ArrayAdapter;
 
 public class MainActivity extends ListActivity {
 	
+	//배열 생성
 	String[] items ={"바나나", "딸기", "배", "멜론", "사과", "망고", "감", "땅콩", "호두", "밀감", "귤", "오렌지", "애플", "파인애플", "코코아"};
 	
 	ArrayAdapter<String> adapter;
@@ -21,6 +21,7 @@ public class MainActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//어댑터 생성
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 		
 		//ListView에 Adapter객체 등록
@@ -47,7 +48,7 @@ public class MainActivity extends ListActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		//메뉴를 클릭했을 때 이벤트 처리
-		switch(item.getItemId()){
+		switch(item.getItemId()){	//리스트의 각 아이템 사이의 높이 서렂ㅇ
 		case 1:
 			getListView().setDividerHeight(16);
 			break;
@@ -64,7 +65,4 @@ public class MainActivity extends ListActivity {
 		
 		return true;
 	}
-
-	
-
 }

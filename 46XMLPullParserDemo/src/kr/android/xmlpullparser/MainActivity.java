@@ -20,6 +20,7 @@ import android.os.Build;
 
 public class MainActivity extends ListActivity {
 
+	//리스트 객체 생성
 	ArrayList<String> items = new ArrayList<String>();
 	ArrayAdapter<String> adapter;
 
@@ -27,7 +28,6 @@ public class MainActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
 		
 		try{
 			//XML파일을 읽어들여 XmlPullParser 객체 생성
@@ -47,7 +47,7 @@ public class MainActivity extends ListActivity {
 		}
 		
 		//Adapter 생성
-		adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
+		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
 		
 		//ListView의 ArrayAdapter등록
 		setListAdapter(adapter);		

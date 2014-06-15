@@ -34,7 +34,6 @@ public class MainActivity extends Activity {
 			//byte스트림을 문자스트림으로 변환
 			BufferedReader br = new BufferedReader(new InputStreamReader(ais, "UTF-8"));
 			
-			
 			StringBuffer sb = new StringBuffer();
 			String result = null;
 			
@@ -51,6 +50,7 @@ public class MainActivity extends Activity {
 			String menu=jsonObject.getString("menu");
 			text.setText(menu+"\n");
 			
+			//JSONArray 생성
 			JSONArray jsonArray = new JSONArray(jsonObject.getString("member"));
 			
 			for( int i=0; i<jsonArray.length(); i++){

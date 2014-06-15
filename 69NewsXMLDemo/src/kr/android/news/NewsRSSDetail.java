@@ -16,6 +16,7 @@ public class NewsRSSDetail extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.news_detail);
 		
+		//넘어온 데이터 저장
 		Intent intent = getIntent();
 		
 		title = intent.getExtras().getString("title");
@@ -26,6 +27,7 @@ public class NewsRSSDetail extends Activity{
 		//img 태그를 검색해서 https: 삽입 하도록 처리
 		description = description.replaceAll("img src=\"//", "img src=\"https://");
 		
+		//HTML문서 작성
 		StringBuffer text = new StringBuffer();
 		text.append("<html><body><font size=4>");
 		text.append(title);
@@ -35,6 +37,7 @@ public class NewsRSSDetail extends Activity{
 		text.append(pubDate);		
 		text.append("</body></html>");
 		
+		//WebView에 출력
 		wvWeb = (WebView)findViewById(R.id.wvWeb);
 		WebSettings webSettings = wvWeb.getSettings();
 		webSettings.setJavaScriptEnabled(true);
@@ -42,5 +45,4 @@ public class NewsRSSDetail extends Activity{
 		
 		wvWeb.loadDataWithBaseURL(null, text.toString(), "text/html", "UTF-8", null);
 	}
-
 }
