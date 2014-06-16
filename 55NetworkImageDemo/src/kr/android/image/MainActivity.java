@@ -42,12 +42,11 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);		
 		
 		imageView = (ImageView)findViewById(R.id.ivImage);
-		btnGo = (Button)findViewById(R.id.btnGo);
+		btnGo = (Button)findViewById(R.id.btnCall);
 		btnGo.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				progressDialog = ProgressDialog.show(MainActivity.this, "서버에 접속중", "이미지 불러오는 중");		
 				
 				processData();
@@ -78,31 +77,7 @@ public class MainActivity extends Activity {
 			}
 		}.start();
 	}	
-	
-	//서버에 접속해서 Image를 읽기
-	public InputStream getStreamFromURL(){
-		InputStream input = null;
 		
-		try{
-			HttpClient httpClient = new DefaultHttpClient();
-			//요청담당
-			HttpGet getMethod = new HttpGet(IMAGE_URL);
-			
-			//응답을 받을 객체
-			HttpResponse httpResponse = (HttpResponse)httpClient.execute(getMethod);
-			
-			//응답 수신 처리
-			HttpEntity httpEntity = httpResponse.getEntity();
-			BufferedHttpEntity bufferedHttpEntity = new BufferedHttpEntity(httpEntity);
-			input = bufferedHttpEntity.getContent();
-					
-			
-		}catch(Exception e){
-			Log.e(TAG, "네트워크 에러 발생", e);			
-		}
-		
-		return input;
-	}
 
 	//읽어온 InputStream을 Bitmap으로 전달
 	public Bitmap getRemoteImage(InputStream input){
@@ -119,4 +94,29 @@ public class MainActivity extends Activity {
 
 		return bitmap;
 	}
+	
+	//서버에 접속해서 Image를 읽기
+		public InputStream getStreamFromURL(){
+			InputStream input = null;
+			
+			try{
+				HttpClient httpClient = new DefaultHttpClient();
+				//요청담당
+				HttpGet getMethod = new HttpGet(IMAGE_URL);
+				
+				//응답을 받을 객체
+				HttpResponse httpResponse = (HttpResponse)httpClient.execute(getMethod);
+				
+				//응답 수신 처리
+				HttpEntity httpEntity = httpResponse.getEntity();
+				BufferedHttpEntity bufferedHttpEntity = new BufferedHttpEntity(httpEntity);
+				input = bufferedHttpEntity.getContent();
+						
+				
+			}catch(Exception e){
+				Log.e(TAG, "네트워크 에러 발생", e);			
+			}
+			
+			return input;
+		}
 }

@@ -48,29 +48,6 @@ public class MainActivity extends Activity {
 		updateForeCast();
 	}
 	
-	//서버에 접근해서 XML데이터 요청
-	public InputStream getStreamFromURL(){
-		InputStream input = null;
-		
-		try{
-			HttpClient httpClient = new DefaultHttpClient();
-			HttpGet httpGet = new HttpGet(WEATHER_URL);
-			
-			//응답을 받을 객체
-			HttpResponse httpResponse = (HttpResponse)httpClient.execute(httpGet);
-			
-			//응답 수신 처리
-			HttpEntity httpEntity = httpResponse.getEntity();
-			BufferedHttpEntity bufferedHttpEntity = new BufferedHttpEntity(httpEntity);
-			input = bufferedHttpEntity.getContent();
-			
-		}catch(Exception e){
-			Log.e(TAG, "접속 오류", e);
-			
-		}
-		
-		return input;
-	}
 	
 	//스레드 호출
 	public void updateForeCast(){
@@ -81,28 +58,30 @@ public class MainActivity extends Activity {
 			@Override
 			public void run(){
 				//DOM Parser이용
-				//buildForeCastsbyDOM(getStreamFromURL());				
+				buildForeCastsbyDOM(getStreamFromURL());				
 				
 				//XMLPullParser이용
-				buildForeCastsbyXMLPullParser(getStreamFromURL());
+				//buildForeCastsbyXMLPullParser(getStreamFromURL());
 
 				handler.post(new Runnable() {
 					
 					@Override
 					public void run() {
 						
+						//HTML작성
 						String page = generatePage();
 						
 						wvView.loadDataWithBaseURL(null, page, "text/html", "UTF-8", null);
 						//Toast.makeText(MainActivity.this, "성공", Toast.LENGTH_SHORT).show();
 						//ProgressBar 안 보여지게 처리
-						progressBar.setVisibility(View.GONE);						
+						progressBar.setVisibility(View.GONE);
 					}
 				});
 				
 			}
 		}.start();
 	}
+	
 	
 	//XML파일을 읽어들여 XmlPullParser가 파싱
 	public void buildForeCastsbyXMLPullParser(InputStream input){
@@ -122,23 +101,21 @@ public class MainActivity extends Activity {
 					if(parser.getName().equals("local")){
 						//날씨 처리
 						desc = parser.getAttributeValue(2);
-						
+
 						//온도 처리
 						ta = parser.getAttributeValue(3);
-								
-					}else if(parser.getEventType()==XmlPullParser.TEXT){
-						//지역정보
-						local = parser.getText();
-					}else if(parser.getEventType()==XmlPullParser.END_TAG){
-						if(parser.getName().equals("local")){
-							arrayList.add(new ForeCast(local, desc, ta));
-						}
 					}
-					//XMLPullParsr의 커서를 다음 요소(텍스트)로 이동
-					parser.next();
+
+				}else if(parser.getEventType()==XmlPullParser.TEXT){
+					//지역정보
+					local = parser.getText();
+				}else if(parser.getEventType()==XmlPullParser.END_TAG){
+					if(parser.getName().equals("local")){
+						arrayList.add(new ForeCast(local, desc, ta));
+					}
 				}
-				
-				
+				//XMLPullParsr의 커서를 다음 요소(텍스트)로 이동
+				parser.next();
 			}
 			
 		}catch(Exception e){
@@ -146,7 +123,6 @@ public class MainActivity extends Activity {
 		}
 		
 	}
-	
 	
 	
 	//XML파일을 DOM트리를 생성해서 파싱
@@ -157,7 +133,7 @@ public class MainActivity extends Activity {
 			DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			
 			//DOM tree 생성
-			Document doc = builder.newDocument();
+			Document doc = builder.parse(input);
 			
 			NodeList weather = doc.getElementsByTagName("local");
 			
@@ -166,7 +142,7 @@ public class MainActivity extends Activity {
 				Element local = (Element)weather.item(i);
 				
 				ForeCast forecast = new ForeCast();
-				//지역
+				//지역(도시명)
 				forecast.local = local.getFirstChild().getNodeValue();
 				//날씨
 				forecast.desc = local.getAttribute("desc");
@@ -181,6 +157,7 @@ public class MainActivity extends Activity {
 			Log.e(TAG, "파싱 에러", e);
 		}		
 	}
+	
 	
 	//UI작업(데이터를 표시하기 위한 HTML)
 	public String generatePage(){	
@@ -204,6 +181,32 @@ public class MainActivity extends Activity {
 		
 		return result.toString();
 	}
+	
+	
+	//서버에 접근해서 XML데이터 요청
+	public InputStream getStreamFromURL(){
+		InputStream input = null;
+
+		try{
+			HttpClient httpClient = new DefaultHttpClient();
+			HttpGet httpGet = new HttpGet(WEATHER_URL);
+
+			//응답을 받을 객체
+			HttpResponse httpResponse = (HttpResponse)httpClient.execute(httpGet);
+
+			//응답 수신 처리
+			HttpEntity httpEntity = httpResponse.getEntity();
+			BufferedHttpEntity bufferedHttpEntity = new BufferedHttpEntity(httpEntity);
+			input = bufferedHttpEntity.getContent();
+
+		}catch(Exception e){
+			Log.e(TAG, "접속 오류", e);
+
+		}
+
+		return input;
+	}
+
 	
 	//날씨정보(지역, 날씨, 온도)를 저장할 클래스 객체 생성
 	class ForeCast{

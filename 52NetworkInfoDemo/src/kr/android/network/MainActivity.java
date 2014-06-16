@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
 		//모든 정보의 객체저장
 		NetworkInfo[] networkInfos = connectivityManager.getAllNetworkInfo();
 		
+		//네트워크 정보 출력
 		for(int i=0; i<networkInfos.length; i++){
 			NetworkInfo networkInfo = networkInfos[i];
 			tvInfo.append("typeName: " + networkInfo.getTypeName() + "\n");
@@ -32,9 +33,5 @@ public class MainActivity extends Activity {
 			tvInfo.append("=================================\n");
 		}
 
-		
 	}
-
-	
-
 }

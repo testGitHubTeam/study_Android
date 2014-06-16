@@ -34,12 +34,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		etView =(EditText)findViewById(R.id.etView);
-		btnGo = (Button)findViewById(R.id.btnGo);
+		btnGo = (Button)findViewById(R.id.btnCall);
 		btnGo.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// 
+				// 다이어로그 창 표시
 				progressDialog = ProgressDialog.show(MainActivity.this, "사이트 접속 중", "잠시만 기다려주세요");
 				
 				processData();
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 		});		
 	}
 	
-	//스레드를 구성해서 서버에 접근해서 HTML호출
+	//스레드를 구성해서 서버에 접근해서 HTML호출 후 HTML문서 출력
 	public void processData(){
 		//초기화
 		//버튼을 여러번 누를 수 있기 때문에 누를때마다 기존것 지우고 보여주기 위해
@@ -78,11 +78,9 @@ public class MainActivity extends Activity {
 		}.start();
 	}
 	
-	//서버에 접근해서 원하는 HTML를 호출한 후 파일을 반환 받음
+	//서버에 접근해 원하는 HTML를 호출한 후 파일을 반환 받음
 	public String getStringFromURL(){
 		String responseBody = null;
-		
-		
 		
 		try{
 			

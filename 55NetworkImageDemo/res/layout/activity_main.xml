@@ -7,19 +7,19 @@
     >
 
     <Button
-        android:id="@+id/btnGo"
+        android:id="@+id/btnCall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Go" />
+        android:text="Call" />
 
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btnGo"
+        android:layout_below="@+id/btnCall"
        />
 
 </RelativeLayout>

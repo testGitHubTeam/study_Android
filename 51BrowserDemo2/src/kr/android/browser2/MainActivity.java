@@ -30,7 +30,8 @@ public class MainActivity extends Activity {
 		webSettings.setBuiltInZoomControls(true);
 		
 		//기본URL설정
-		wvWeb.loadUrl("http://m.naver.com");		
+		//wvWeb.loadUrl("http://m.naver.com");		
+		wvWeb.loadUrl("http://m.daum.net");
 		
 		//ZOOM기능 확인하기위해 PC버전의 URL설정
 		//wvWeb.loadUrl("http://www.korea.com");
@@ -70,15 +71,10 @@ public class MainActivity extends Activity {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					//창 닫기
-					
-					
 				}
 			}).show();			
 			
 		}		
 		return true;
 	}
-
-	
-
 }

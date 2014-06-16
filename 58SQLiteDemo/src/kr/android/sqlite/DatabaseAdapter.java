@@ -141,6 +141,7 @@ public class DatabaseAdapter {
 						
 			}while(cursor.moveToNext());
 		}
+		//Cursor 자원정리
 		cursor.close();
 		
 		return stringBuffer.toString();		
@@ -158,7 +159,7 @@ public class DatabaseAdapter {
 	        //context	: Activity등의 Context 인스턴스 
 	        //DB_NAME	: 데이터베이스의 이름 
 	        //null	: 커서 팩토리(보통 null지정) 
-	        //1		: 데이터베이스 스키마 버전 (스키마 버전 업데이트 하는 경우: 디비 업데이트시)
+	        //1		: 데이터베이스 스키마 버전 (디비 업데이트시 스키마 버전 업데이트 함)
 
 		}
 		//처음 일회 동작

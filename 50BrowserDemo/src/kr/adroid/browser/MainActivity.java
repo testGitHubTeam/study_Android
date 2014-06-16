@@ -33,10 +33,12 @@ public class MainActivity extends Activity {
 		//URL 링크
 		//browser.loadUrl("http://m.naver.com");
 		
+		
 		//HTML 직접 생성
 /*		String msg ="<html><body>Hellow Android World!!!</body></html>";		
 												//mimeType	:문서타입
 		browser.loadDataWithBaseURL(null, msg, "text/html", "UTF-8", null);*/
+		
 		
 		//assets의 HTML파일 이용
 		browser.loadUrl("file:///android_asset/hello.html");
@@ -58,13 +60,11 @@ public class MainActivity extends Activity {
 				
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					// TODO Auto-generated method stub
 					
 				}
 			}).show();
 			
 			result.confirm();
-			
 			
 			return true;
 		}

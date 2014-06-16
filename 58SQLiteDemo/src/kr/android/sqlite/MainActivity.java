@@ -44,7 +44,7 @@ public class MainActivity extends ListActivity implements OnClickListener {
 		//삭제, 수정버튼 비활성화
 		setEnabled(false);
 	}
-	
+
 	
 	//
 	@Override
@@ -81,9 +81,10 @@ public class MainActivity extends ListActivity implements OnClickListener {
 		
 		//ListView에 SimpleCursorAdapter등록
 		setListAdapter(simpleCursorAdapter);
-		
 	}
 
+	
+	//이벤트 처리
 	@Override
 	public void onClick(View v) {			
 		
@@ -103,7 +104,6 @@ public class MainActivity extends ListActivity implements OnClickListener {
 			}			
 		}		else if(v.getId()==R.id.btnDelete){	//삭제
 			databaseAdapter.deleteMemo(id);
-			
 		}
 		//EditText 초기화
 		etEditMemo.setText("");
@@ -118,6 +118,7 @@ public class MainActivity extends ListActivity implements OnClickListener {
 		//SimpleCursorAdapter의 Cursor교체하게 되면 결과적으로 ListView 를 갱신하는 효과
 		simpleCursorAdapter.changeCursor(cursor);
 	}
+	
 	
 	//ListView 이벤트 핸들러
 	@Override
@@ -136,6 +137,7 @@ public class MainActivity extends ListActivity implements OnClickListener {
 		
 	}
 	
+	
 	//삭제, 수정버튼 상태 변경
 	private void setEnabled(boolean enabled){
 		int buttons[] = {R.id.btnDelete, R.id.btnModify};
@@ -146,15 +148,13 @@ public class MainActivity extends ListActivity implements OnClickListener {
 		}
 	}
 	
+	
 	//검색된 내용 표시
 	private void toastMemo(String str){
 		if(str.length() ==0){
 			return;
 		}
 		String memo = databaseAdapter.searchMemo(str);
-		Toast.makeText(this, memo, Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, memo, Toast.LENGTH_LONG).show();
 	}
-	
-	
-	
 }
