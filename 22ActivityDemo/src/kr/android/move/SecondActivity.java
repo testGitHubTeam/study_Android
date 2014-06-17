@@ -21,7 +21,7 @@ public class SecondActivity extends Activity{
 		Intent intent = getIntent();
 		Bundle bundle = intent.getExtras();
 		
-		if(bundle== null){	//데이터가 보관할 수 있는 번들객체가 null이면 데이터가 없음을 의미		
+		if(bundle== null){	//데이터를 보관할 수 있는 번들객체가 null이면 데이터가 없음을 의미		
 			tv.append("\n\n 저장된 데이터가 없습니다!");
 		}else{
 			String msg = bundle.getString("msg");

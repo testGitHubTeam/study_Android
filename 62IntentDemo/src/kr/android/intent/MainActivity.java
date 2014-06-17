@@ -17,16 +17,16 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		//이벤트소스와 이벤트리스너 연결
 		for(int button: buttons){
 			Button btn = (Button)findViewById(button);
 			btn.setOnClickListener(this);
 		}
-		
 	}
 
+	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		
 		Intent intent = null;
 		
@@ -52,7 +52,4 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 				
 		startActivity(intent);
 	}
-
-	
-
 }

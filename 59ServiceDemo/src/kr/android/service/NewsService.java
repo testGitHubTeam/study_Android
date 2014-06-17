@@ -7,17 +7,14 @@ import android.os.IBinder;
 import android.widget.Toast;
 
 public class NewsService extends Service{
-
 	
 	Handler handler = new Handler();
+
 	//스레드 종료처리를 위한 변수
 	boolean bQuit;
 	
-	
-	
 	@Override
 	public IBinder onBind(Intent intent) {
-		// 
 		return null;
 	}
 
@@ -42,11 +39,9 @@ public class NewsService extends Service{
 		
 		//스레드 종료
 		bQuit=true;
-		
 	}
 	
-	//스레드 정의: 
-	//원격지에서 데이터를 전송받아서 표시하는 역할	
+	//스레드 정의: 원격지에서 데이터를 전송받아서 표시하는 역할	
 	class NewsThread extends Thread{
 		String[] enuNews = {
 				"사과는 빨게 빨간것은 빨간것은 원숭이 엉덩이",
@@ -61,14 +56,17 @@ public class NewsService extends Service{
 		@Override
 		public void run() {
 
-			for(int idx=0; bQuit=false; idx++){
+			for(int idx=0; bQuit==false; idx++){
+				
+				
+				
 				final String msg = enuNews[idx%enuNews.length];
 				
+				//UI에 데이터 설정
 				handler.post(new Runnable() {
 					
 					@Override
 					public void run() {
-						// 
 						Toast.makeText(NewsService.this, msg, Toast.LENGTH_LONG).show();
 						
 					}
@@ -76,24 +74,12 @@ public class NewsService extends Service{
 				
 				//7초 단위로 데이터 읽어오기
 				try{
-					Thread.sleep(7000);
+					Thread.sleep(3000);
 				}catch(Exception e){
 					
 				}
 			}
-			
 			//super.run();
 		}
-			
-		
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-
 }

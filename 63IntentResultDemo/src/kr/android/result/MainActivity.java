@@ -16,7 +16,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	//호출한 Activity 식별을 위한 식별자 상수 정의
 	private static final int SHOW_ACTIVITY_INTENTTWO = 1;
 	private static final int SHOW_ACTIVITY_ADDRESS = 2;
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +25,13 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 		btnIntentTwo = (Button)findViewById(R.id.btnIntentTwo);
 		btnAddress = (Button)findViewById(R.id.btnAddress);
 		
+		//이벤트 리스너 연결
 		btnIntentTwo.setOnClickListener(this);
 		btnAddress.setOnClickListener(this);
 		
 	}
-
-
+	
+	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
 		Intent intent = null;
@@ -45,13 +45,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 			intent = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts/people"));
 			//Activity호출
 			startActivityForResult(intent, SHOW_ACTIVITY_ADDRESS);
-			
 		}
-		
 	}
 	
 	// Activity 호출시 결과값을 받는 메소드 작성
-	// setResult()호출하면 onActivityResult( )데이터를 받게 됨
+	// setResult()호출하면 onActivityResult( )에서 데이터를 받게 됨
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data){
 		super.onActivityResult(requestCode, resultCode, data);

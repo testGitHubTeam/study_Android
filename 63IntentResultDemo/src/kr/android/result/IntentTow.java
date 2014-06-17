@@ -13,7 +13,6 @@ public class IntentTow extends Activity implements OnClickListener{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_two);
 		
@@ -27,7 +26,6 @@ public class IntentTow extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		
 		if(v.getId()==R.id.btnSuccess){
 			Intent intentResult = getIntent();

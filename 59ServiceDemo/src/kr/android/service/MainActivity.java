@@ -10,7 +10,6 @@ import android.widget.Button;
 public class MainActivity extends Activity implements OnClickListener{
 	
 	Button btnNewsStart, btnNewsEnd;
-	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +21,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		
 		btnNewsStart.setOnClickListener(this);
 		btnNewsEnd.setOnClickListener(this);
-
 		
 	}
-
 
 	@Override
 	public void onClick(View v) {

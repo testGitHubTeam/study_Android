@@ -36,15 +36,15 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 		btnPhotoSelect = (Button)findViewById(R.id.btnPhotoSelect);
 		//버튼을 이벤트 리스너와 연결
 		btnPhotoSelect.setOnClickListener(this);
-
 		
 	}
 
+	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
 		// 갤러리를 호출해서 휴대폰에 저장된 이미지를 읽어들임
 		Intent intent = new Intent();
-		//여러 리소스들의 목록들을 ACTI ON_GET_CONTENT 값 가져올 수 있도록 설정
+		//여러 리소스들의 목록들을 ACTION_GET_CONTENT 값 가져올 수 있도록 설정
 		intent.setAction(Intent.ACTION_GET_CONTENT);
 		//image/jpeg, image/png, image/gif등 이미지파일을 타입으로 지정
 		intent.setType("image/*");
@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 				try{
 					Uri uri = data.getData();
 					//이미지 뷰에 이미지 보여주기
-														//getContentResolver( )가 매개역할을 하여 uri를 통해 데이터를 호출할 수 있도록 해주는 객체
+														//getContentResolver()가 매개역할을 하여 uri를 통해 데이터를 호출할 수 있도록 해주는 객체
 					Bitmap image = Images.Media.getBitmap(getContentResolver(), uri);
 					ivPhoto.setImageBitmap(image);
 					ivPhoto.setVisibility(View.VISIBLE);
@@ -71,6 +71,13 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 					tvFileInfo.append("URI: " + uri.toString()+"\n");
 					tvFileInfo.append("Last Path Segemnt: "+uri.getLastPathSegment()+"\n");
 					
+					//Cursor 데이터를 쿼리하여 가져올때사용
+//					uri			:'content://' scheme를 가지고 가져올 Content Provider를 결정합니다.
+//					projection	: 리턴 받아야 하는 데이터 column의 이름목록입니다.
+//								  null 지정 시 모든 column을 가져옵니다.
+//					selection	:SQLite의 WHERE 구문의 내용을 결정합니다.
+//					selectionArgs	:selection의 arguments 들을 나열합니다.
+//					sortOrder		:SQLite의 ORDER BY와 같은 정렬방식을 결정합니다.
 					Cursor cursor = getContentResolver().query(Images.Media.EXTERNAL_CONTENT_URI, null, Images.Media._ID+"=?", new String[]{uri.getLastPathSegment()}, null);
 					if(cursor.moveToFirst()){
 						String imagePath = cursor.getString(cursor.getColumnIndexOrThrow(Images.Media.DATA));

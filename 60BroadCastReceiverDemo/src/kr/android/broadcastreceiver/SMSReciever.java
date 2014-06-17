@@ -17,12 +17,14 @@ public class SMSReciever extends BroadcastReceiver{
 	//알림창이 만들어지면 알림창을 제어할수 있는 ID정의
 	private static final int NOTIFY_ID =1234;
 	
-	//브로드캐스트 메시지 수신시 자동 호출됨
+	//브로드캐스트 메시지 수신시 자동 호출되는 onReceive() 재정의
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		//context	: 어플케이션의 정보를 가짐 
 		//intent	: 메시지의 정보를 가짐
+		
 		Bundle bundle = intent.getExtras();
+		
 		//import android.telephony.SmsMessage;
 		SmsMessage[] smsMessages = null;
 		String address ="";
@@ -70,7 +72,7 @@ public class SMSReciever extends BroadcastReceiver{
 		 * FLAG_ONE_SHOT		: 이 플래그를 이용해 생성된 PendingIntent는 단 한번 밖에 사용될 수 없음
 		 * FLAG_UPDATE_CURRENT	: 만일 이미 생성된 PendingIntent가 존재한다면 해당 intent의 내용을 변경	
 		*/
-		//알림창 최상단의 아이콘 옆에 보여지는 메시지알림메시지 제일 상단에 표시		
+		//알림창 최상단의 아이콘 옆에 보여지는 알림메시지 제일 상단에 표시		
 		builder.setTicker(address + " : " + message);
 		//알림메시지를 클릭해서 Activity를 호출하면 자동으로 알림메시지 제거(true:제거, false:미제거)
 		builder.setAutoCancel(true);

@@ -40,6 +40,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 		btnButton2.setOnClickListener(this);
 	}
 
+	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
 		// 화면 이동
@@ -57,14 +58,5 @@ public class MainActivity extends Activity implements View.OnClickListener{
 		
 		//인텐트의 매개변수를 통해 액티비티 실행
 		startActivity(intent);
-		
-		
 	}
-	
-	
-	
-	
-
-	
-
 }

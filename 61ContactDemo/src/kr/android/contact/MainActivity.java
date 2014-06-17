@@ -11,7 +11,6 @@ import android.widget.Button;
 public class MainActivity extends Activity implements OnClickListener{
 
 	Button btnPick, btnView;
-	Uri uri;
 	Intent intent;
 	
 	@Override
@@ -27,7 +26,6 @@ public class MainActivity extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		if(v.getId()==R.id.btnPick){			
 			
 			//호출방식 설정하여 인텐트 생성
@@ -41,6 +39,5 @@ public class MainActivity extends Activity implements OnClickListener{
 		}
 		
 		startActivity(intent);
-		
 	}	
 }
