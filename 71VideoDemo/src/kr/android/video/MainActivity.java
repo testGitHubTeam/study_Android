@@ -19,7 +19,7 @@ public class MainActivity extends ActionBarActivity {
 	
 	VideoView vwVideo;
 	File sd_path = Environment.getExternalStorageDirectory();
-	final String VIDEO_path = "http://192.168.0.20:8080/web/wondergirls.mp4";
+	final String VIDEO_path = "http://192.168.0.2:8080/HellowWeb/movie02.mp4";
 	
 
 	@Override
@@ -29,26 +29,35 @@ public class MainActivity extends ActionBarActivity {
 
 		vwVideo = (VideoView)findViewById(R.id.vwVideo);
 		vwVideo.requestFocus();
+		//미디어 컨롤러 생성 후 등록
 		vwVideo.setMediaController(new MediaController(this));
 		
 		try{
+			
 			//raw의 파일을 내장영역에 저장
-			rawToFile(this, R.raw.wondergirls, "wondergirls.mp4");
+			//rawToFile(this, R.raw.movie01, "movie01.mp4");
 			
 			//내장영역의 동영상 호출
 			//외부에서 호출할 수 있도록 경로 지정
-			//String path = getFilesDir().getAbsolutePath()+"/wondergirls.mp4";
-			//vwVideo.setVideoPath(path);
-			//Toast.makeText(MainActivity.this, getFilesDir().getAbsolutePath().toString(), Toast.LENGTH_LONG).show();
+			String path = getFilesDir().getAbsolutePath()+"/movie01.mp4";
+			//VideoView객체에서 재상할 동영상 설정
+			vwVideo.setVideoPath(path);
+			Toast.makeText(MainActivity.this, getFilesDir().getAbsolutePath().toString(), Toast.LENGTH_LONG).show();
+						
 			
+			/*
 			//SD카드에서 동영상 호출
-			//vwVideo.setVideoPath(sd_path.getAbsolutePath()+ "/wondergirls.mp4");
-			//Toast.makeText(MainActivity.this, sd_path.getAbsolutePath().toString(), Toast.LENGTH_LONG).show();
+			vwVideo.setVideoPath(sd_path.getAbsolutePath()+ "/movie03.mp4");
+			Toast.makeText(MainActivity.this, sd_path.getAbsolutePath().toString(), Toast.LENGTH_LONG).show();
+			*/
 			
+			
+			/*
 			//서버에서 동영상 호출			
+			//VideoView객체에서 재상할 동영상 설정
 			vwVideo.setVideoURI(Uri.parse(VIDEO_path));
 			Toast.makeText(MainActivity.this, VIDEO_path, Toast.LENGTH_LONG).show();
-			
+			*/
 			
 		}catch(Exception e){
 			Log.e("VideoDemo", "Play Error", e);

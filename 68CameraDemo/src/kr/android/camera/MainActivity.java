@@ -16,7 +16,7 @@ import android.hardware.Camera.ShutterCallback;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore.Audio.Media;
+import android.provider.MediaStore.Images.Media;
 import android.support.v7.app.ActionBarActivity;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -79,6 +79,7 @@ public class MainActivity extends ActionBarActivity {
 		}
 	};
 	
+	
 	//사진 저장
 	PictureCallback picture = new PictureCallback() {
 		
@@ -135,6 +136,7 @@ public class MainActivity extends ActionBarActivity {
 		}
 	};	
 
+	
 	//메뉴 등록
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
@@ -144,7 +146,7 @@ public class MainActivity extends ActionBarActivity {
 		menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
 			
 			@Override
-			public boolean onMenuItemClick(MenuItem item) {
+			public boolean onMenuItemClick(MenuItem menuItem) {
 				
 				Intent intent = new Intent(Intent.ACTION_VIEW, Media.EXTERNAL_CONTENT_URI);
 				startActivity(intent);
@@ -155,6 +157,7 @@ public class MainActivity extends ActionBarActivity {
 		return true;
 	}
 }	//End of MainActivity
+
 
 /*
  * View에 동영상 또는 카메라 프리뷰와 같이 빠른 화면 변화 또는 그려지는 양이 많을 경우 SurfaceView를 사용해 처리
@@ -180,6 +183,7 @@ public class MainActivity extends ActionBarActivity {
 //고속영상을 제공하는 뷰 정의
 class MyCameraSurface extends SurfaceView implements SurfaceHolder.Callback{
 	
+	//객체 선언
 	//버퍼에 있는 데이터를 SurfaceView에 전달하는 객체정의
 	SurfaceHolder mholder;
 	//import android.hardware.Camera;
@@ -189,7 +193,7 @@ class MyCameraSurface extends SurfaceView implements SurfaceHolder.Callback{
 	public MyCameraSurface(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		
-		//SurfaceHolder초기화
+		//SurfaceHolder 객체 생성 및 SurfaceHolder초기화
 		mholder = getHolder();
 		//SurfaceHolder와 Callback연결
 		mholder.addCallback(this);
@@ -217,7 +221,7 @@ class MyCameraSurface extends SurfaceView implements SurfaceHolder.Callback{
 	@Override
 	public void surfaceChanged(SurfaceHolder holder, int format, int width,
 			int height) {
-		//카메라로 보기 구현하는 이벤트 처리
+		//카메라로 미리보기 구현하는 이벤트 처리
 		mCamera.startPreview();		
 	}	
 

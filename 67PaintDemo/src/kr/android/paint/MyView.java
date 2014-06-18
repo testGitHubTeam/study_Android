@@ -11,6 +11,7 @@ import android.view.View;
 
 public class MyView extends View{
 	//Activity에서 커스텀 뷰를 사용하기 위해
+	//Context객체 하나를 파라미터로 가지는 생성자 정의
 	public MyView(Context context){
 		super(context);
 	}
@@ -21,6 +22,7 @@ public class MyView extends View{
 	}
 	
 	//그림 그리기
+	//onDraw()메소드는 뷰가 화면에 디스플레이될 때 자동으로 호출됩니다.
 	public void onDraw(Canvas canvas){
 		//백그라운드 색깔 지정
 		canvas.drawColor(Color.BLACK);

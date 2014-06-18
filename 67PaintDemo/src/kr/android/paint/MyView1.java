@@ -9,6 +9,7 @@ import android.view.View;
 
 public class MyView1 extends View{
 	//Activity에서 커스텀 뷰를 사용하기 위해
+	//Context객체 하나를 파라미터로 가지는 생성자 정의
 	public MyView1(Context context){
 		super(context);
 	}
@@ -22,14 +23,6 @@ public class MyView1 extends View{
 	public void onDraw(Canvas canvas){
 		//백그라운드 지정
 		canvas.drawColor(Color.BLACK);
-		//그리기 옵션 지정
-		Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		//drawLine
-		paint.setColor(Color.GREEN);
-		paint.setStrokeWidth(10);
-					//시작x, 시작y, 끝x, 끝y, Paint객체
-		canvas.drawLine(50, 0, 50, 100, paint);
-		
 		
 	}
 

@@ -34,7 +34,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		if(v.getId()==R.id.btnWrite){	//프리퍼런스에 데이터 쓰기
 			//1.SharedPreferences객체 호출
 			//PreferencesEx파일명으로 덮어쓰기 모드로 파일 생성
@@ -55,7 +54,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 													//key, defaultValue
 			tvView.setText(sharedPreferences.getString("text", ""));				
 			
-		}else if(v.getId()==R.id.btnMove){
+		}else if(v.getId()==R.id.btnMove){	//화면 이동
 			Intent intent = new Intent(this, MainTwo.class);
 			startActivity(intent);			
 		}

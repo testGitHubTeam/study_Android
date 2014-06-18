@@ -7,33 +7,19 @@
      >
 
     <Button
-        android:id="@+id/btnPlayLocal"
+        android:id="@+id/btnPlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="로컬영역에서 재생 시작" />
-	<Button
-        android:id="@+id/btnPlayServer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btnPlayLocal"
-        android:text="서버에서 재생 시작" />
+        android:text="오디오 재생 시작" />
 
-    <Button
-        android:id="@+id/btnPlaySDCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btnPlayServer"
-        android:text="SD카드에서 재생 시작" />
     <Button
         android:id="@+id/btnPause"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/btnPlaySDCard"
+        android:layout_below="@+id/btnPlay"
         android:text="오디오 재생 일시중지" />
 
     <Button

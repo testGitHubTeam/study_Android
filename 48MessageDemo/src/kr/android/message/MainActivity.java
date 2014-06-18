@@ -38,9 +38,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		switch(v.getId()){
 		case R.id.btnAlert:
 			//경고창 생성
-			//setCancelable(true)	: 백버튼으로 창을 닫을 것인지 설정
-			//new AlertDialog.Builder(this).setTitle("대화상자").setMessage("경고창을 오픈하였습니다!").setCancelable(true).setNeutralButton("닫기", new DialogInterface.OnClickListener() {
 			//체인걸어서 속성 호출
+																								//setCancelable(true)	: 백버튼으로 창을 닫을 것인지 설정
+			//new AlertDialog.Builder(this).setTitle("대화상자").setMessage("경고창을 오픈하였습니다!").setCancelable(true).setNeutralButton("닫기", new DialogInterface.OnClickListener() {
 			new AlertDialog.Builder(this).setTitle("대화상자").setMessage("경고창을 오픈하였습니다!").setCancelable(false).setNeutralButton("닫기", new DialogInterface.OnClickListener() {
 				
 				@Override

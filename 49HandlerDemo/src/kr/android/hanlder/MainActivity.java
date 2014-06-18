@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 
 public class MainActivity extends Activity {
 	
-	
+	//객체 선언
 	ProgressBar progressBar;	
 	//Android.os.Handler
 	Handler handler = new Handler();
@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
 		progressBar = (ProgressBar)findViewById(R.id.pbProgress);
 	}
 	
+	//포그라운로 가기전 실행됨
 	//스레드로 데이터 처리
 	@Override
 	public void  onStart(){
@@ -37,12 +38,6 @@ public class MainActivity extends Activity {
 		progressBar.setProgress(0);
 		
 		//화면 인터페이스와 별도의 백그라운드 작업을 위해 스레드 생성
-/*		Runnable r = new Runnable() {			
-			@Override
-			public void run() {								
-			}
-		};		
-		Thread background= new Thread(r);*/		
 		Thread background = new Thread(new Runnable() {
 			
 			@Override
@@ -57,7 +52,7 @@ public class MainActivity extends Activity {
 						handler.post(new Runnable() {
 							@Override
 							public void run() {
-								// UI에 접근해서 화면 제정
+								// UI에 접근해서 화면 갱신
 								progressBar.incrementProgressBy(5);							
 							}
 						});
@@ -70,9 +65,6 @@ public class MainActivity extends Activity {
 		
 		isRunning = true;
 		background.start();
-		
-		
-		
 	}
 	
 	//스레드 중지
