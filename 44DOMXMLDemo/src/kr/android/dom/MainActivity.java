@@ -38,6 +38,7 @@ public class MainActivity extends ListActivity {
 			DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			
 			//InputStream을 읽어들여 DOM트리 생성
+			//import org.w3c.dom.Document;
 			Document doc = builder.parse(in);
 			
 			//NodeList words = doc.getDocumentElement().getElementsByTagName("word");
@@ -45,6 +46,7 @@ public class MainActivity extends ListActivity {
 			NodeList words = doc.getElementsByTagName("word");
 			
 			for(int i=0; i<words.getLength(); i++){
+				//import org.w3c.dom.Element;
 				Element e = (Element)words.item(i);
 				items.add( e.getAttribute("value") );				
 			}

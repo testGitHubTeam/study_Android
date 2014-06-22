@@ -33,6 +33,7 @@ public class MainActivity extends ActionBarActivity implements OnMarkerClickList
 		
 		if(map==null){
 			//layout에 정의한 map객체를 참조
+								//minSdkVersion="11"
 			map = ((MapFragment)getFragmentManager().findFragmentById(R.id.map)).getMap();
 			if(map!=null){
 				//기본 마커표시
