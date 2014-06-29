@@ -158,10 +158,10 @@ public class DatabaseAdapter {
 			super(context, DB_NAME, null, 1);
 	        //context	: Activity등의 Context 인스턴스 
 	        //DB_NAME	: 데이터베이스의 이름 
-	        //null	: 커서 팩토리(보통 null지정) 
-	        //1		: 데이터베이스 스키마 버전 (디비 업데이트시 스키마 버전 업데이트 함)
-
+	        //null		: 커서 팩토리(보통 null지정) 
+	        //1			: 데이터베이스 스키마 버전 (디비 업데이트시 스키마 버전 업데이트 함)
 		}
+		
 		//처음 일회 동작
 		@Override
 		public void onCreate(SQLiteDatabase db) {

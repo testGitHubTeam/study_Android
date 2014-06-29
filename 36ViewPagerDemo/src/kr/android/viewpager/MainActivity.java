@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 	
 	//추상클래스인 PagerAdapter상속하여 커스텀페이저어댑터 정의
 	private class MyPagerAdapter extends PagerAdapter{		
-		//XML을 읽어들여서 XML에 표시된 클래스 정보를 토대로 객체를 생성해주는 객체 선언
+		//XML을 읽어들여서 XML에 표시된 클래스 정보를 토대로 하여 객체를 생성해주는 객체 선언
 		LayoutInflater myLayoutInflater;
 		
 		public MyPagerAdapter(Context context){
@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
 			switch(position){
 			case 0:
 				
-				//지정된 XML파일을 읽어들여 객체를 생성하고 XML의 상위에 있는 View를 반환
+				//지정된 XML파일을 읽어들여 객체를 생성하고 XML의 상에 있는 View를 반환
 				v = myLayoutInflater.inflate(R.layout.page_yellow, null);
 				//RelativeLayout의 하위객체인 Button을 호출하여 이벤트 연결				
 				v.findViewById(R.id.btnYellow).setOnClickListener(myListener);

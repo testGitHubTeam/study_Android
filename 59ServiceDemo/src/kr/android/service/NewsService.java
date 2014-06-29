@@ -58,8 +58,6 @@ public class NewsService extends Service{
 
 			for(int idx=0; bQuit==false; idx++){
 				
-				
-				
 				final String msg = enuNews[idx%enuNews.length];
 				
 				//UI에 데이터 설정

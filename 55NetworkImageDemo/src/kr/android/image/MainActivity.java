@@ -96,27 +96,27 @@ public class MainActivity extends Activity {
 	}
 	
 	//서버에 접속해서 Image를 읽기
-		public InputStream getStreamFromURL(){
-			InputStream input = null;
-			
-			try{
-				HttpClient httpClient = new DefaultHttpClient();
-				//요청담당
-				HttpGet getMethod = new HttpGet(IMAGE_URL);
-				
-				//응답을 받을 객체
-				HttpResponse httpResponse = (HttpResponse)httpClient.execute(getMethod);
-				
-				//응답 수신 처리
-				HttpEntity httpEntity = httpResponse.getEntity();
-				BufferedHttpEntity bufferedHttpEntity = new BufferedHttpEntity(httpEntity);
-				input = bufferedHttpEntity.getContent();
-						
-				
-			}catch(Exception e){
-				Log.e(TAG, "네트워크 에러 발생", e);			
-			}
-			
-			return input;
+	public InputStream getStreamFromURL(){
+		InputStream input = null;
+
+		try{
+			HttpClient httpClient = new DefaultHttpClient();
+			//요청담당
+			HttpGet getMethod = new HttpGet(IMAGE_URL);
+
+			//응답을 받을 객체
+			HttpResponse httpResponse = (HttpResponse)httpClient.execute(getMethod);
+
+			//응답 수신 처리
+			HttpEntity httpEntity = httpResponse.getEntity();
+			BufferedHttpEntity bufferedHttpEntity = new BufferedHttpEntity(httpEntity);
+			input = bufferedHttpEntity.getContent();
+
+
+		}catch(Exception e){
+			Log.e(TAG, "네트워크 에러 발생", e);			
 		}
+
+		return input;
+	}
 }

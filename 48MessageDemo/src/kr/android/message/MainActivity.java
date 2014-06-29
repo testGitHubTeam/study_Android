@@ -33,7 +33,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	//이벤트 핸들러
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		
 		switch(v.getId()){
 		case R.id.btnAlert:

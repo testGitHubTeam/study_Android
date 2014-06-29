@@ -93,7 +93,6 @@ public class MainActivity extends ListActivity {
 	/** 
 	 * XML파싱
 	 * 
-	 * @param in
 	 */
 	private void parseXML(InputStream in){
 		
@@ -192,7 +191,6 @@ public class MainActivity extends ListActivity {
 	
 	/**
 	 * 커스텀 어탭터
-	 * @author user
 	 *
 	 */
 	class MyListAdapter extends BaseAdapter{
@@ -250,7 +248,6 @@ public class MainActivity extends ListActivity {
 
 /**
  * 데이터 저장
- * @author user
  *
  */
 class MyNews{

@@ -158,31 +158,6 @@ public class MainActivity extends Activity {
 		}		
 	}
 	
-	
-	//UI작업(데이터를 표시하기 위한 HTML)
-	public String generatePage(){	
-		
-		StringBuffer result = new StringBuffer("<html><body><table width=100%>");
-		result.append("<tr><th width=30%>지역</th>");
-			result.append("<th width=50%>날씨</th>");
-			result.append("<th width=20%>온도</th></tr>");
-		
-			for(ForeCast foreCast: arrayList){
-				result.append("<tr><td align=center>");
-				result.append(foreCast.local);
-				result.append("</td><td align=center>");
-				result.append(foreCast.desc);
-				result.append("</td><td align=center>");
-				result.append(foreCast.ta);
-				result.append("</td></tr>");
-			}
-		result.append("</table></body></html>");
-		
-		
-		return result.toString();
-	}
-	
-	
 	//서버에 접근해서 XML데이터 요청
 	public InputStream getStreamFromURL(){
 		InputStream input = null;
@@ -207,6 +182,29 @@ public class MainActivity extends Activity {
 		return input;
 	}
 
+	
+	//UI작업(데이터를 표시하기 위한 HTML)
+	public String generatePage(){	
+		
+		StringBuffer result = new StringBuffer("<html><body><table width=100%>");
+			result.append("<tr><th width=30%>지역</th>");
+			result.append("<th width=50%>날씨</th>");
+			result.append("<th width=20%>온도</th></tr>");
+		
+			for(ForeCast foreCast: arrayList){
+				result.append("<tr><td align=center>");
+				result.append(foreCast.local);
+				result.append("</td><td align=center>");
+				result.append(foreCast.desc);
+				result.append("</td><td align=center>");
+				result.append(foreCast.ta);
+				result.append("</td></tr>");
+			}
+		result.append("</table></body></html>");
+		
+		
+		return result.toString();
+	}
 	
 	//날씨정보(지역, 날씨, 온도)를 저장할 클래스 객체 생성
 	class ForeCast{
