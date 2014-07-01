@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore.Images;
@@ -43,9 +42,17 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// 갤러리를 호출해서 휴대폰에 저장된 이미지를 읽어들임
+		
+/*
+  		킷캣이전에 명시하던 방법
 		Intent intent = new Intent();
 		//여러 리소스들의 목록들을 ACTION_GET_CONTENT 값 가져올 수 있도록 설정
 		intent.setAction(Intent.ACTION_GET_CONTENT);
+*/
+		//킷캣 호환성을 위해 명시하는 방법
+		Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+		
+		
 		//image/jpeg, image/png, image/gif등 이미지파일을 타입으로 지정
 		intent.setType("image/*");
 		startActivityForResult(intent, 0);		
@@ -69,7 +76,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 					//이미지 정보 추출 및 표시
 					tvFileInfo.setText("========이미지 정보===========\n");
 					tvFileInfo.append("URI: " + uri.toString()+"\n");
-					tvFileInfo.append("Last Path Segemnt: "+uri.getLastPathSegment()+"\n");
+					tvFileInfo.append("Last Path Segement: "+uri.getLastPathSegment()+"\n");
 					
 					//Cursor 데이터를 쿼리하여 가져올때사용
 //					uri			:'content://' scheme를 가지고 가져올 Content Provider를 결정합니다.
@@ -91,7 +98,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 					
 					//선택된 SD Card에 저장된(\storage\sdcard\) 파일을 읽어들여 내부 어플리케이션 내부 공간(\data\data\kr.android.gallery\files\test.jpg)에 저장하는 것
 					fileOutputStream = openFileOutput("test.jpg",  MODE_PRIVATE);
-									//포멧, 컬리티					
+									//포멧, 컬리티, 스트림				
 					image.compress(CompressFormat.JPEG, 100, fileOutputStream);
 					
 				}catch(Exception e){
