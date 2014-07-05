@@ -3,12 +3,8 @@ package kr.android.contact;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Contacts;
-import android.provider.Contacts.People;
-import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;

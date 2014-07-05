@@ -1,9 +1,10 @@
+/*기본 틀 잡기*/
+
 package kr.android.paint;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 

@@ -97,8 +97,10 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 			try {
 				//로컬 영역 재생
 				playAudioLocal();
+				
 				//서버영역 재생
 				//playAudioServer(AUDIO_PATH);
+				
 				//SDCard영역 재생
 				//playAudioSD();
 				
