@@ -16,6 +16,7 @@ import android.widget.Toast;
 												//import android.view.View.OnClickListener;
 public class MainActivity extends ListActivity implements OnClickListener {
 	
+	//데이터베이스 접근을 위한 객체 선언
 	DatabaseAdapter databaseAdapter;
 	static final String TAG = "SQLiteDemo";
 	TextView tv_mCurrentID;
@@ -46,7 +47,7 @@ public class MainActivity extends ListActivity implements OnClickListener {
 	}
 
 	
-	//
+	//데이터베이스 사용 완료
 	@Override
 	protected void onPause(){
 		super.onPause();
@@ -102,7 +103,7 @@ public class MainActivity extends ListActivity implements OnClickListener {
 				databaseAdapter.setMemo(id, content);
 				toastMemo(content); 	//서치
 			}			
-		}		else if(v.getId()==R.id.btnDelete){	//삭제
+		}else if(v.getId()==R.id.btnDelete){	//삭제
 			databaseAdapter.deleteMemo(id);
 		}
 		//EditText 초기화
